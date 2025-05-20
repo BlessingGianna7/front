@@ -1,22 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
-import Footer from './components/common/Footer';
+import PrivateRoute from './components/common/PrivateRoute';
+import ParkDetails from './components/parks/ParkDetails';
+import ParkForm from './components/parks/ParkForm';
+import { AuthProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Register from './pages/Register';
-import Parks from './pages/Parks';
-import ParkDetails from './components/parks/ParkDetails';
 import MyParks from './pages/MyParks';
-import ParkForm from './components/parks/ParkForm';
-import PendingParks from './pages/PendingParks';
-import Requests from './pages/Requests';
 import OwnerRequests from './pages/OwnerRequests';
+import Parks from './pages/Parks';
+import PendingParks from './pages/PendingParks';
+import Register from './pages/Register';
+import Requests from './pages/Requests';
 // import PrivateRoute from './components/common/PrivateRoute';
-import PrivateRoute from './components/common/PrivateRoute';
 import ResetPasswordPage from './pages/ResetPassword';
-
 
 function App() {
     return (
@@ -47,8 +45,6 @@ function App() {
                             </Route>
                         </Routes>
                     </main>
-                    
-                    <Footer />
                 </div>
             </AuthProvider>
         </Router>
